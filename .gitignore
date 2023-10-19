@@ -2,3 +2,4 @@ config.ini
 *.pyc
 app/logs/*
 *.xlsx
+*.code-workspace

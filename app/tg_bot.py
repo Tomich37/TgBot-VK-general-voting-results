@@ -93,9 +93,10 @@ class TgBot:
                             formatted_results[question] = {'answers': []}
                         formatted_results[question]['answers'].extend(answers)
 
+                    total_votes = 0
                     for question, data in formatted_results.items():
                         votes = [answer['votes'] for answer in data['answers']]
-                        total_votes = sum(votes)
+                        total_votes += sum(votes)
                         data['total_votes'] = total_votes
 
                     # Создаем список для хранения результатов
